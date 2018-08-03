@@ -1,0 +1,33 @@
+extends base.jade
+
+block title
+    if request.path.startswith('/tag/') and posts.tags
+        title= posts.tags.join('+') + ' - ' + site.title
+    elif request.path.startswith('/category/') and posts.category
+        title= posts.category.title + ' - ' + site.title
+    elif request.args.s
+        title= request.args.s + ' - ' + site.title
+    elif site.configs.sub_title
+        title= site.title + ' - ' + site.configs.sub_title
+
+block content
+    .post_list_site
+        if request.path.strip('/')=='category'
+            +response.redirect('/categories')
+        if request.path.strip('/')=='tag'
+            +response.redirect('/categories')
+
+        .post_list_folder
+            if request.path.startswith('/tag/') and posts.tags
+                .labeltitle= '「%s」下的文章' %posts.tags.join("+")
+            elif request.path.startswith('/category/') and posts.category
+                .labeltitle= '「%s」下的文章' %posts.category.title
+            +posts.set_min_per_page(10)
+            +page(as_ul=False)
+                for post in posts
+                    .post_list_item
+                        if post.category
+                            a.cat(href=post.category.url)= post.category.title
+                        a.post_title(href=post.url, target="_blank")
+                            span.post_title_text= post.title
+

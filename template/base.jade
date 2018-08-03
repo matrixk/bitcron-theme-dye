@@ -1,0 +1,59 @@
+html
+    head
+        block title
+
+        script(src="https://use.typekit.net/jdb5cpn.js")
+        script
+            try{Typekit.load({ async: true });}catch(e){}
+        +h.headers
+        +h.load('/template/style.scss', 'font')
+
+
+
+    body
+        .bg_site(style='background-image: url(/template/image/bgimg.png)')
+        .header
+            .side_text
+                .info_site
+                    if site.background_image
+                        span.description_site= site.configs.sub_title
+                    #credit
+                        .credit
+                            span= '&#169;'
+                            span= site.now.year
+                            span= site.title
+                        .credit
+                            span= '%s篇文章' %(d.get_data(types='post', return_count=true, with_page=false))
+                            span= '%s字' %('{0:,}'.format(site.text_words))
+                        .credit
+                            a.credit(href='https://mytrix.in/post/zi-zhi/bitcron-theme-dye', target='_blank') 主题「染」
+                            a.credit(href='https://bitcron.com', target='_blank') Powered by Bitcron
+
+                    .nav_site
+                        +site.just_nav
+                .header_site
+                        a.name_site(href='/')=  site.title
+
+
+
+        .content_site
+            block content
+
+        //+h.paginator(pre_label="上一页",  next_label="下一页")
+
+	script
+		// smooth scrolling
+		$(function() {
+			$('a[href*=#]:not([href=#])').click(function() {
+				if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+					var target = $(this.hash);
+					target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+					if (target.length) {
+						$('html,body').animate({
+							scrollTop: target.offset().top-71
+						}, 500);
+						return false;
+					}
+				}
+			});
+		});

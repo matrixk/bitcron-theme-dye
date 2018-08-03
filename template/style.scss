@@ -1,0 +1,406 @@
+/*
+Theme: Dye
+Theme URI: https://mytrix.in/post/zi-zhi/bitcron-theme-dye
+Author: Mytrix
+Author URI: https://mytrix.in/
+Copyright: © 2018 Mytrix
+*/
+
+
+/*Basic-----------------------------------------------------*/
+
+
+body {
+    overflow-x: hidden;
+    background: #fff;
+    font-size: 1.1em;
+    line-height: 1.8;
+    font-family: source-han-serif-sc, 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    overflow-wrap: break-word;
+    text-align: justify;
+    letter-spacing: 0.1em;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    transition: all 0.5s;
+}
+
+a:hover {
+        color: #ee3f4d;
+}
+
+/*Header-----------------------------------------------------*/
+
+.bg_site {
+    position: absolute;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-position: right;
+    width: 100%;
+    top: -32em;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.side_text {
+    text-align: right;
+    margin-right: 9em;
+}
+
+.info_site {
+    writing-mode: vertical-rl;
+    display: inline;
+    text-align: left;
+    max-height: 17em;
+    margin: 1.5em 0;
+}
+
+.header {
+    position: relative;
+}
+
+.header_site {
+    display: inline;
+}
+
+.name_site {
+    border: 30px solid #fff;
+    border-image: url(/template/image/border.png) 46;
+    -moz-border-image: url(/template/image/border.png) 46 46 stretch; /* 老版本的 Firefox */
+    -webkit-border-image: url(/template/image/border.png) 46 46 stretch; /* Safari */
+    -o-border-image: url(/template/image/border.png) 46 46 stretch; /* Opera */
+    display: inline;
+    max-height: 4em;
+    margin: 1em 0em 1em 2em;
+    writing-mode: vertical-rl;
+    letter-spacing: 1em;
+    padding: 1em 0em 0 0;
+    font-size: 2.5em;
+    text-decoration: none;
+    color: #000;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.description_site {
+    font-weight: bold;
+    font-size: 1.3em;
+    text-shadow: #fff 0 0 5px;
+}
+
+.credit {
+    font-size: 0.9em;
+    color: #717171;
+}
+
+#credit {
+    position: fixed;
+    right: 30px;
+    width: 0px;
+    bottom: 3em;
+    text-align: right;
+}
+
+.mixed_site_nav.site_nav.sm.sm-base {
+    list-style: none;
+    padding: 0;
+}
+
+.nav_site {
+    text-shadow: #fff 0 0 5px;
+}
+
+/*Content-----------------------------------------------------*/
+
+.content_site {
+    margin: 0 auto;
+}
+
+.post_list_site {
+    line-height: 2.1;
+    overflow: auto;
+}
+
+.post_list_folder {
+    background: rgba(255, 255, 255, 0.9);
+    position: absolute;
+    top: 376px;
+    bottom: 0em;
+    right: 12em;
+    left: 5em;
+    padding: 1em;
+    writing-mode: vertical-rl;
+    margin: 0 auto 3em auto;
+    border: 15px solid #fff;
+    border-image: url(/template/image/border2.png) 30;
+    -moz-border-image: url(/template/image/border2.png) 30 30 stretch; /* 老版本的 Firefox */
+    -webkit-border-image: url(/template/image/border2.png) 30 30 stretch; /* Safari */
+    -o-border-image: url(/template/image/border2.png) 30 30 stretch; /* Opera */
+    overflow: auto;
+}
+
+.labeltitle {
+    font-size: 0.8em;
+    text-align: center;
+    margin: 1em 0;
+}
+
+.post_title {
+    font-size: 1.1em;
+    overflow: hidden;
+    display: block;
+}
+
+.post_title_text {
+    border-left: solid 1px;
+}
+
+.cat {
+    font-size: 1.1em;
+    color: #fff;
+    line-height: 1.8;
+    background: #000000;
+    padding: 0.5em 0;
+    transition: all 0.5s;
+    float: left;
+    margin-bottom: 10px;
+}
+
+.cat:hover  {
+    color: #fff;
+    background: #9c9c9c;
+}
+
+.paginator.pager.pagination {
+    max-width: 800px;
+    margin: 2em auto;
+    text-align: center;
+}
+
+.btn.next.older-posts.older_posts {
+    margin: 1em;
+}
+
+a.btn.pre.newer-posts.newer_posts {
+    margin: 1em;
+}
+
+
+.arch_title {
+    border-left: solid 1px;
+    display: block;
+    font-size: 1.2em;
+    line-height: 2.2;
+}
+
+/* Responsive ---------------------------------*/
+@media (max-width: 1301px) {
+#credit {
+    position: absolute;
+}
+
+.post_list_folder {
+    right: 5em;
+    left: -2em;
+}
+
+.bg_site {
+    background-size: contain;
+}
+}
+
+@media (max-width: 800px) {
+
+body {
+    letter-spacing: 0;
+}
+
+.info_site {
+    writing-mode: inherit;
+}
+
+.name_site {
+    margin: 0;
+    border: 20px solid #fff;
+    border-image: url(/template/image/border.png) 46;
+    -moz-border-image: url(/template/image/border.png) 46 46 stretch; /* 老版本的 Firefox */
+    -webkit-border-image: url(/template/image/border.png) 46 46 stretch; /* Safari */
+    -o-border-image: url(/template/image/border.png) 46 46 stretch; /* Opera */
+    max-height: unset;
+    letter-spacing: 0.5em;
+    padding: 0.5em 0em 0 0;
+    font-size: 2em;
+    height: 3em;
+    float: right;
+    position: absolute;
+    top: 3em;
+    right: 15vw;
+}
+
+#credit {
+    display: none;
+}
+
+.description_site {
+    font-size: 1em;
+    display: block;
+    margin-bottom: 4em;
+}
+
+
+
+.bg_site {
+    background-size: contain;
+    top: -19em;
+    bottom: -27em;
+}
+
+.side_text {
+    text-align: left;
+    margin: 2em auto;
+    max-width: 85vw;
+}
+
+.post_list_site {
+    margin: auto 10px;
+}
+
+.post_list_folder {
+    margin: 0 10px 3em 10px;
+    position: relative;
+    margin: 0 auto;
+    top: unset;
+    bottom: unset;
+    right: unset;
+    left: unset;
+    max-width: 85vw;
+    max-height: unset;
+    margin: 2em auto;
+    padding: 0 1em;
+    writing-mode: horizontal-tb;
+}
+
+.post_title {
+    border-bottom: none;
+}
+
+.post_title_text {
+    font-size: 1em;
+    border-left: none;
+    border-bottom: solid 1px;
+}
+
+.cat {
+    line-height: 2;
+    padding: 0 0.5em;
+    font-size: 1em;
+    margin-right: 0.5em;
+    margin-bottom: 0;
+}
+
+.arch_title {
+    border-left: none;
+    border-bottom: solid 1px;
+}
+
+}
+
+
+@media (max-height: 750px) {
+
+body {
+    letter-spacing: 0;
+}
+
+.info_site {
+    writing-mode: inherit;
+}
+
+.name_site {
+    margin: 0;
+    border: 20px solid #fff;
+    border-image: url(/template/image/border.png) 46;
+    -moz-border-image: url(/template/image/border.png) 46 46 stretch; /* 老版本的 Firefox */
+    -webkit-border-image: url(/template/image/border.png) 46 46 stretch; /* Safari */
+    -o-border-image: url(/template/image/border.png) 46 46 stretch; /* Opera */
+    max-height: unset;
+    letter-spacing: 0.5em;
+    padding: 0.5em 0em 0 0;
+    font-size: 2em;
+    height: 3em;
+    float: right;
+    position: absolute;
+    top: 3em;
+    right: 15vw;
+}
+
+#credit {
+    display: none;
+}
+
+.description_site {
+    font-size: 1em;
+    display: block;
+    margin-bottom: 4em;
+}
+
+
+
+.bg_site {
+    background-size: contain;
+    top: -19em;
+    bottom: -27em;
+}
+
+.side_text {
+    text-align: left;
+    margin: 2em auto;
+    max-width: 85vw;
+}
+
+.post_list_site {
+    margin: auto 10px;
+}
+
+.post_list_folder {
+    margin: 0 10px 3em 10px;
+    position: relative;
+    margin: 0 auto;
+    top: unset;
+    bottom: unset;
+    right: unset;
+    left: unset;
+    max-width: 85vw;
+    max-height: unset;
+    margin: 2em auto;
+    padding: 0 1em;
+    writing-mode: horizontal-tb;
+}
+
+.post_title {
+    border-bottom: none;
+}
+
+.post_title_text {
+    font-size: 1em;
+    border-left: none;
+    border-bottom: solid 1px;
+}
+
+.cat {
+    line-height: 2;
+    padding: 0 0.5em;
+    font-size: 1em;
+    margin-right: 0.5em;
+    margin-bottom: 0;
+}
+
+.arch_title {
+    border-left: none;
+    border-bottom: solid 1px;
+}
+
+}
