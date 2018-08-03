@@ -194,7 +194,21 @@ table tbody > tr:nth-child(odd) > td, table tbody > tr:nth-child(odd) > th {
     }
     span {
         display: block;
+        sup {
+            a {
+                text-decoration: none;
+                color: #000;
+                transition: all 0.5s;
+                &:hover {
+                    color: #ee3f4d;
+                }
+                &:after {
+                    display: none;
+                }
+            }
+        }
         a {
+            display: -webkit-box;
             text-indent: 0;
         }
     }
@@ -282,6 +296,7 @@ table tbody > tr:nth-child(odd) > td, table tbody > tr:nth-child(odd) > th {
             a {
                 color: #000000;
                 display: inline;
+                transition: all 0.5s;
                 &:hover {
                     color: #ee3f4d;
                 }
