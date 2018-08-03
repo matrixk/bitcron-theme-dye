@@ -193,7 +193,7 @@ table tbody > tr:nth-child(odd) > td, table tbody > tr:nth-child(odd) > th {
         }
     }
     span {
-        display: block;
+        /*display: block;*/
         sup {
             a {
                 text-decoration: none;
@@ -208,7 +208,7 @@ table tbody > tr:nth-child(odd) > td, table tbody > tr:nth-child(odd) > th {
             }
         }
         a {
-            display: -webkit-inline-box;
+            display: inline-block;
             text-indent: 0;
         }
     }
