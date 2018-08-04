@@ -367,6 +367,9 @@ table tbody > tr:nth-child(odd) > td, table tbody > tr:nth-child(odd) > th {
             padding: 0 0.5em;
             position: absolute;
         }
+        .md_line {
+            text-indent: 0;
+        }
     }
 }
 
